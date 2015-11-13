@@ -60,7 +60,7 @@ class TasksController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
 
     def all_tasks
-      @tasks = Task.all
+      @tasks = Task.order(deadline: :asc)
     end 
 
     def set_task
